@@ -4,7 +4,7 @@ mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
 # Uncomment to set the keymap you want. Replace "fr" by your country code
-# localectl --no-convert set-x11-keymap fr
+localectl --no-convert set-x11-keymap us
 
 # Function able to install any package from the AUR (needs the package names as arguments).
 aur_install() {
@@ -45,7 +45,6 @@ done
 
 DOTFILES="/home/$(whoami)/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
-    # Don't forget to replace Phantas0s with your own username on Github
     git clone https://github.com/ecastle23/dotfiles.git \
     "$DOTFILES" >/dev/null
 fi
